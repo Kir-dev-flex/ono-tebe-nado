@@ -32,3 +32,17 @@ a {
 img {
   width: 100%;
 }
+
+button {
+  border: none;
+  outline: none;
+  color: #fff;
+  font-family: inherit;
+  background-color: transparent;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 40px;
+  text-transform: uppercase;
+}

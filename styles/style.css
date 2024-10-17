@@ -1,1 +1,373 @@
-/* место для вашего кода */
+/* Header */
+
+.header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  align-items: center;
+  margin-top: 88px;
+  margin-bottom: 96px;
+  padding: 0 51px;
+  font-size: 18px;
+}
+
+.header__links-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 34px;
+  list-style-type: none;
+}
+
+/* List style лично у меня мылится, псведоэлементы нет */
+.header__links-list-item {
+  position: relative;
+}
+
+/* Самый левый элемент без подчеркивания */
+.header__links-list-item:not(:first-child)::before {
+  content: "";
+  position: absolute; 
+  top: 7px;
+  /* Ширина плюс расстояние от ссылки */
+  left: -18px;
+  width: 7px;
+  height: 7px;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+
+/* Подчеркивание отличается от макетного, поэтому псевдоэлементом сделаю */
+.header__link {
+  position: relative;
+  text-decoration: none;
+}
+
+.header__link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+}
+
+/* У активного элемента нет подчеркивания */
+.header__links-list-item_active .header__link::before {
+  display: none;
+}
+
+.header__logo {
+  justify-self: center;
+  width: 100%;
+  max-width: 134px;
+}
+
+.header__adress {
+  justify-self: end;
+  width: 100%;
+  max-width: 237px;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.header__adress a {
+  display: block;
+  width: fit-content;
+}
+
+/* Header end */
+
+
+/* Cover */
+
+.cover {
+  position: relative;
+  margin-bottom: 177px;
+  padding: 158px 50px 52px;
+  color: #fff;
+  background-image: url(../images/cover.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cover__title {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 135px;
+  font-weight: 700;
+  font-size: 100px;
+  letter-spacing: 30px;
+  text-transform: uppercase;
+}
+
+.aligned-text_left, .aligned-text_center, .aligned-text_right {
+  display: block;
+  margin-bottom: 13px;
+}
+
+
+.aligned-text_left {
+  text-align: left;
+}
+
+.aligned-text_center {
+  margin-right: 26px;
+  text-align: center;
+}
+
+.aligned-text_right {
+  line-height: 1;
+  text-align: right;
+}
+
+.aligned-text_left .margin-added {
+  margin-left: 30px;
+}
+
+.aligned-text_center .margin-added {
+  margin-left: 61px;
+}
+
+.aligned-text_right .margin-added {
+  margin-right: 30px;
+}
+
+.no-letter-spacing {
+  letter-spacing: normal;
+}
+
+.cover__description {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.cover__description-text {
+  padding-left: 27px;
+  font-size: 22px;
+  text-transform: uppercase;
+  word-spacing: 19px;
+}
+
+.bet-button {
+  border: 1px solid #fff;
+  padding: 12px 32px;
+  font-weight: 500;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+/* Cover end */
+
+/* Lots */
+
+.lots {
+  margin-bottom: 146px;
+}
+
+.lots__title {
+  margin-bottom: 27px;
+  padding-left: 64px;
+}
+
+.lots__card-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 25px;
+  margin-bottom: 30px;
+  padding: 0 24px;
+  list-style-type: none;
+}
+
+.lots__card-list-item {
+  flex-grow: 1;
+  max-width: 334px;
+}
+
+.card__link {
+  text-decoration: none;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 50px 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.card__title, .card__text {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-decoration-color: #fff;
+}
+
+.card__title {
+  font-weight: 700;
+  font-size: 22px;
+  text-decoration: underline;
+  text-decoration-color: #fff;
+  text-decoration-thickness: 1px;
+  text-transform: uppercase;
+}
+
+.card__text {
+  font-size: 20px;
+}
+
+.card_type_film {
+  background-image: url(../images/card-lot-01.jpg);
+}
+
+.card_type_book {
+  background-image: url(../images/card-lot-02.jpg);
+}
+
+.card_type_picture {
+  background-image: url(../images/card-lot-03.jpg);
+}
+
+.lots__look-more-link {
+  padding-left: 64px;
+  font-size: 20px;
+}
+
+/* Lots end */
+
+/* About */
+
+.about {
+  display: grid;
+  grid-template-columns: 334px 1fr;
+  gap: 24px;
+  margin-bottom: 203px;
+  padding-top: 35px;
+  padding-left: 25px;
+}
+
+.about__column:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.about__column:last-child {
+  padding-top: 100px;
+}
+
+.about__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 240px;
+  height: 100%;
+  max-height: 240px;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+.about__logo-image {
+  max-width: 146px;
+}
+
+.about__text {
+  font-size: 20px;
+}
+
+.about__title {
+  margin-bottom: 100px;
+}
+
+.about__text:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+/* About end */
+
+/* Footer */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 0 50px 88px;
+}
+
+.footer__adress {
+  justify-self: end;
+  width: 100%;
+  max-width: 237px;
+  font-size: 18px;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.footer__link {
+  position: relative;
+  display: block;
+  width: fit-content;
+  text-decoration: none;
+}
+
+.footer__menu-link {
+  position: relative;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.footer__link::before, .footer__menu-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+}
+
+/* У активного элемента нет подчеркивания */
+.footer__menu-list-item_active .footer__menu-link::before {
+  display: none;
+}
+
+.footer__menu-link {
+  text-decoration: none;
+}
+
+.footer__menu-list {
+  text-align: center;
+  list-style-type: none;
+}
+
+.footer__social-list {
+  list-style-type: none;
+}
+
+.footer__social-list {
+  display: flex;
+  gap: 48px;
+}
+
+.footer__social-icon {
+  max-width: 48px;
+}
+
+/* Footer end */
