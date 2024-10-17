@@ -27,8 +27,7 @@
   content: "";
   position: absolute; 
   top: 7px;
-  /* Ширина плюс расстояние от ссылки */
-  left: -18px;
+  left: -18px; /* Ширина плюс расстояние от ссылки */
   width: 7px;
   height: 7px;
   border: 1px solid #000;
@@ -331,6 +330,7 @@
   position: relative;
   font-size: 18px;
   line-height: 22px;
+  text-decoration: none;
 }
 
 .footer__link::before, .footer__menu-link::before {
@@ -348,21 +348,14 @@
   display: none;
 }
 
-.footer__menu-link {
-  text-decoration: none;
-}
-
 .footer__menu-list {
   text-align: center;
   list-style-type: none;
 }
 
 .footer__social-list {
-  list-style-type: none;
-}
-
-.footer__social-list {
   display: flex;
+  list-style-type: none;
   gap: 48px;
 }
 
