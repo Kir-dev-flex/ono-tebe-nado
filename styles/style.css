@@ -17,7 +17,7 @@
   list-style-type: none;
 }
 
-/* List style лично у меня мылится, псведоэлементы нет */
+/* List style лично у меня мылится, а псведоэлементы нет */
 .header__links-list-item {
   position: relative;
 }
