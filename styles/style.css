@@ -65,8 +65,8 @@
   justify-self: end;
   width: 100%;
   max-width: 237px;
-  line-height: 24px;
   font-size: 18px;
+  line-height: 24px;
   white-space: nowrap;
 }
 
@@ -357,8 +357,8 @@
 
 .footer__social-list {
   display: flex;
-  list-style-type: none;
   gap: 48px;
+  list-style-type: none;
 }
 
 .footer__social-icon {
