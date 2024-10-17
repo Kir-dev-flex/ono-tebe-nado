@@ -25,7 +25,7 @@
 /* Самый левый элемент без подчеркивания */
 .header__links-list-item:not(:first-child)::before {
   content: "";
-  position: absolute; 
+  position: absolute;
   top: 7px;
   left: -18px; /* Ширина плюс расстояние от ссылки */
   width: 7px;
